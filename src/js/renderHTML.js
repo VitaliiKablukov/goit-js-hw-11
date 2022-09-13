@@ -1,8 +1,9 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 const gallery = document.querySelector('.gallery');
-let pageUrl = [];
+
 function renderHtml(data) {
+  let pageUrl = [];
   data.data.hits.map(pirtueUrl => {
     const renderHtml = `<div class="photo-card">
   <a class="gallery__item" href="${pirtueUrl.largeImageURL}"><img  src=${pirtueUrl.webformatURL} alt="${pirtueUrl.tags}" loading="lazy" /></a>
